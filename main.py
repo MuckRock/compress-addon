@@ -32,6 +32,7 @@ class Compress(AddOn):
             filename = f"{document.slug}.pdf"
             with open(filename, "wb") as f:
                 f.write(document.pdf)
+        print(os.listdir())
         os.chdir("./out/")
         os.chdir("..")
 
