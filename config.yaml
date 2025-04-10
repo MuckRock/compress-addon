@@ -1,5 +1,5 @@
 title: Document Compression Add-On 
-description: Compresses a document that is already uploaded to DocumentCloud and uploads a copy. 
+description: Compresses a document that is already uploaded to DocumentCloud using Ghostscript and uploads a copy. 
 instructions: ''
 type: object
 documents:
