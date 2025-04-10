@@ -1,29 +1,21 @@
-# The title is the title of your Add-On
-title: Hello World
-# The description will be shown above the form when activating the Add-On
-description: This is an updated simple test add-on
-# Optional instructions field to describe how to use the Add-On
-instructions: This is a sample instruction.
-# Top level type should always be object
+title: Document Compression Add-On 
+description: Compresses a document that is already uploaded to DocumentCloud and uploads a copy. 
+instructions: ''
 type: object
-# How does this add-on accept documents
-# If more than one type is specified, the user will be prompted to choose one
 documents:
-  # By the currently selected documents
-  - selected
-  # By the current search query
-  - query
-# Properties are the fields for your form
+  [selected]
 properties:
-  # the key is the name of the variable that will be returned to your code
-  name:
-    # the title is what will be shown as the form label
-    title: Name
-    # a string is text
+  project_id:
+    title: Project ID
+    type: integer
+    description: Project ID of the project you would like to upload the documents to. 
+  access_level:
+    title: Access level for uploaded documents
     type: string
-# Categories are what type of Add-On this is. Used to sort the Add-On in the Add-On menu. 
-categories: 
+    default: private
+    enum:
+      - private
+      - organization
+      - public
+categories:
   - file
-# Acceptable categories are premium, ai, export, bulk, file,  monitor, statistical, and extraction. 
-# You can read more about DocumentCloud Add-On categories here: https://www.documentcloud.org/help/add-ons#types-of-add-ons
-version: 2
