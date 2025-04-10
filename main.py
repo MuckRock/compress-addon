@@ -28,6 +28,7 @@ class Compress(AddOn):
         """Fetch the files from either a cloud share link or any public URL"""
         self.set_message("Retrieving files to compress...")
         os.makedirs(os.path.dirname("./out/"), exist_ok=True)
+        os.chdir("out")
         for document in self.get_documents():
             filename = f"{document.slug}.pdf"
             with open(filename, "wb") as f:
